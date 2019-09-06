@@ -48,11 +48,11 @@ class TGEnvironment(Environment):
 
         :param file: document as file or bytes
         :param filename: name of provided file
-        :param kwargs: arguments for telegram's "sendFile"
+        :param kwargs: arguments for telegram's "sendDocument"
         :returns: :class:`.TGAttachmentTemp`
         """
 
-        return TGAttachmentTemp("doc", file, kwargs)
+        return TGAttachmentTemp("document", file, kwargs)
 
     async def upload_photo(self, file, **kwargs):
         """
